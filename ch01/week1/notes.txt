@@ -1,0 +1,44 @@
+Through 
+virtualization
+
+, the operating system abstracts physical hardware into simplified representations.
+These representations are accessed through 
+interfaces
+
+The operating system handles these requests, acting as a 
+resource manager
+
+~/workspace$ ./memory 1 & ./memory 100 &
+
+
+Each process has its own private virtual address space (also known as its address space), which the operating system maps into the machine’s physical memory.
+A memory reference within one running program has no effect on the address space of other processes (or the operating system); the running program has its own virtual memory.
+Physical memory, on the other hand, is a shared resource managed by the operating system.
+
+Memory is accessed constantly to fetch instructions, as well as read and write data. The operating system virtualized memory so it can be easily used by running programs – but these programs are not directly accessing the physical memory – just the virtualized memory!
+
+./concurrency 1000
+./concurrency 1000
+
+gcc -o io io.c -Wall
+
+> gcc -c hello.c
+> gcc -c helper.c
+> gcc -o hello hello.o helper.o -lm
+> gcc -o hello hello.c helper.c -- time consuming 
+
+Notes on Maakefile 
+==================
+target: prerequisite1 prerequisite2 ...
+    command1
+    command2 ...
+    
+    =========
+Debugging
+
+You can use gdb to debug your C programs by:
+Compiling with the -g flag
+> gcc -g -o buggy buggy.c
+Opening gdb with the executable file
+> gdb buggy
+
